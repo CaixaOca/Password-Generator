@@ -1,0 +1,53 @@
+<script>
+    function gerar(){
+        var result           = '';
+        var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        var charactersLength = characters.length;
+        for ( var i = 0; i < document.getElementById("numerocar").value; i++ ) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+
+        document.getElementById("pass").value = "Password: " + result;
+
+        }
+    }
+</script>
+
+<script>
+
+function check(){
+    window.open("https://howsecureismypassword.net/")
+}
+
+</script>
+
+<html style="background-color: dimgray;">
+
+    <head>
+
+        <p style="font-size: 50px; text-align: center ; font-family: Verdana, Geneva, Tahoma, sans-serif;">Gerador de password</p>
+
+        <br><br>
+
+    </head>
+
+    <body>
+        <div style="text-align: center ; font-size: 25px ; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+            Número caracteres:<input type="number" id="numerocar" style="width: 65px ; font-size: 25px; background-color: dimgray ;" value="30" step="1">
+            <br>
+            <br>
+            <input style="background-color: dimgray ; font-size: 25px; font-family: Verdana, Geneva, Tahoma, sans-serif;" type="button" value="Gerar Password" onclick="gerar()"/>
+        </div>
+        
+        <br>
+        <br>
+        <br>
+        <div style="text-align: center;">
+            <output style="font-size: 25px; font-family: Verdana, Geneva, Tahoma, sans-serif;" type="text" id="pass"></output>
+            <br>
+            <br>
+            <br>
+            <input style="background-color: dimgray ; font-size: 25px; font-family: Verdana, Geneva, Tahoma, sans-serif;" type="button" onclick="check()" value="Verificar seguranca da password"></input>
+        </div>
+    </body>
+
+</html>
