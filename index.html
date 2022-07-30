@@ -4,11 +4,14 @@
         var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
         var charactersLength = characters.length;
         for ( var i = 0; i < document.getElementById("numerocar").value; i++ ) {
-        result += characters.charAt(Math.floor(Math.random() * charactersLength));
-
-        document.getElementById("pass").value = "Password: " + result;
-
+            result += characters.charAt(Math.floor(Math.random() * charactersLength));
         }
+        document.getElementById("pass").value = "Password: " + result;
+        
+        // copy to clipboard
+        copy = document.getElementById("pass");
+        copy.select();
+        navigator.clipboard.writeText(copy.value);
     }
 </script>
 
