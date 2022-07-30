@@ -7,11 +7,6 @@
             result += characters.charAt(Math.floor(Math.random() * charactersLength));
         }
         document.getElementById("pass").value = "Password: " + result;
-        
-        // copy to clipboard
-        copy = document.getElementById("pass");
-        copy.select();
-        navigator.clipboard.writeText(copy.value);
     }
 </script>
 
